@@ -4,49 +4,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Portfolio</title>
-    <meta name="description" content="Welcome to my professional portfolio.">
+    <title>CampusConnect - Student Event Management</title>
+    <meta name="description" content="Connect with campus events and activities">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header role="banner">
-        <h1>My Portfolio</h1>
-        <nav role="navigation" aria-label="Main Navigation">
-            <ul>
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main id="main-content" role="main">
-        <section aria-labelledby="hero-heading">
-            <h2 id="hero-heading">Welcome</h2>
-            <p>[Introduction text placeholder]</p>
-            <a href="projects.html" role="button">View My Work</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">CampusConnect</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main id="main-content">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Discover Campus Events</h1>
+                    <p class="hero-subtitle">Connect with your university community through exciting events, workshops,
+                        and activities</p>
+                    <div class="hero-buttons">
+                        <a href="events.html" class="btn btn-primary">Browse Events</a>
+                        <a href="about.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <article aria-labelledby="featured-heading">
-            <h2 id="featured-heading">Featured Update</h2>
-            <p>[Brief update description placeholder]</p>
-            <time datetime="2023-10-27">October 27, 2023</time>
-        </article>
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose CampusConnect?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📅</div>
+                        <h3>Easy Event Discovery</h3>
+                        <p>Find all campus events in one place, from academic seminars to social gatherings</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Personalized Feed</h3>
+                        <p>Get event recommendations based on your interests and academic department</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔔</div>
+                        <h3>Smart Notifications</h3>
+                        <p>Never miss important events with timely reminders and updates</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>Community Building</h3>
+                        <p>Connect with peers who share your interests and expand your network</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <aside aria-labelledby="quick-links-heading">
-            <h2 id="quick-links-heading">Quick Links</h2>
-            <ul>
-                <li><a href="#">[Social Link 1]</a></li>
-                <li><a href="#">[Social Link 2]</a></li>
-            </ul>
-        </aside>
+        <!-- Upcoming Events Preview -->
+        <section class="events-preview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Upcoming Events</h2>
+                    <a href="events.html" class="view-all">View All →</a>
+                </div>
+                <div class="events-grid">
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="date-day">15</span>
+                            <span class="date-month">DEC</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Tech Talk: Web Development Trends</h3>
+                            <p class="event-meta">📍 Computer Science Building | ⏰ 2:00 PM</p>
+                            <p class="event-description">Join us for an insightful session on the latest web development
+                                technologies and best practices.</p>
+                        </div>
+                    </article>
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="date-day">18</span>
+                            <span class="date-month">DEC</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Career Fair 2024</h3>
+                            <p class="event-meta">📍 Main Auditorium | ⏰ 10:00 AM</p>
+                            <p class="event-description">Meet recruiters from top companies and explore internship
+                                opportunities.</p>
+                        </div>
+                    </article>
+                    <article class="event-card">
+                        <div class="event-date">
+                            <span class="date-day">22</span>
+                            <span class="date-month">DEC</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Winter Festival</h3>
+                            <p class="event-meta">📍 Campus Grounds | ⏰ 5:00 PM</p>
+                            <p class="event-description">Celebrate the season with food, music, and fun activities for
+                                all students.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Get Started?</h2>
+                    <p>Join thousands of students already using CampusConnect</p>
+                    <a href="contact.html" class="btn btn-light">Get in Touch</a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer role="contentinfo">
-        <p>&copy; 2023 [Your Name]. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CampusConnect</h3>
+                    <p>Connecting students through events and activities</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@campusconnect.edu</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CampusConnect. Student Project.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
