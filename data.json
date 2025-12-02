@@ -1,0 +1,35 @@
+[
+  {
+    "title": "E-Commerce Dashboard",
+    "description": "A comprehensive dashboard for managing online stores, featuring real-time analytics and inventory management.",
+    "image": "https://placehold.co/600x400?text=E-Commerce",
+    "alt": "Dashboard interface showing sales charts and product lists",
+    "tags": [
+      "React",
+      "Node.js",
+      "Chart.js"
+    ]
+  },
+  {
+    "title": "Task Management App",
+    "description": "A productivity tool designed to help teams collaborate efficiently with drag-and-drop task boards.",
+    "image": "https://placehold.co/600x400?text=Task+App",
+    "alt": "Kanban board with tasks organized in columns",
+    "tags": [
+      "Vue.js",
+      "Firebase",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "title": "Weather Forecast API",
+    "description": "A robust API service providing accurate weather data and forecasts for locations worldwide.",
+    "image": "https://placehold.co/600x400?text=Weather+API",
+    "alt": "Code snippet showing JSON response from weather API",
+    "tags": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL"
+    ]
+  }
+]
