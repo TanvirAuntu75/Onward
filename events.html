@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - CampusConnect</title>
+    <meta name="description" content="Browse all campus events">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">CampusConnect</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html" class="active">Events</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>All Events</h1>
+                <p>Discover what's happening on campus</p>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filters">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">All Events</button>
+                    <button class="filter-btn" data-category="academic">Academic</button>
+                    <button class="filter-btn" data-category="social">Social</button>
+                    <button class="filter-btn" data-category="sports">Sports</button>
+                    <button class="filter-btn" data-category="workshop">Workshops</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events List -->
+        <section class="events-section">
+            <div class="container">
+                <div id="events-container" class="events-list">
+                    <!-- Events will be loaded here by JavaScript -->
+                    <p class="loading">Loading events...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CampusConnect</h3>
+                    <p>Connecting students through events and activities</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@campusconnect.edu</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CampusConnect. Student Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

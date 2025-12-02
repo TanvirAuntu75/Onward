@@ -4,52 +4,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Portfolio</title>
-    <meta name="description" content="Learn more about my background and skills.">
+    <title>About - CampusConnect</title>
+    <meta name="description" content="Learn about CampusConnect">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header role="banner">
-        <h1>My Portfolio</h1>
-        <nav role="navigation" aria-label="Main Navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" aria-current="page">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main id="main-content" role="main">
-        <article aria-labelledby="bio-heading">
-            <header>
-                <h2 id="bio-heading">About Me</h2>
-            </header>
-            <section>
-                <h3>Biography</h3>
-                <p>[Biography content placeholder]</p>
-            </section>
-            <section>
-                <h3>Education</h3>
-                <p>[Education details placeholder]</p>
-            </section>
-        </article>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">CampusConnect</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-        <aside aria-labelledby="skills-heading">
-            <h2 id="skills-heading">Skills</h2>
-            <ul>
-                <li>[Skill 1]</li>
-                <li>[Skill 2]</li>
-                <li>[Skill 3]</li>
-            </ul>
-        </aside>
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>About CampusConnect</h1>
+                <p>Our mission and story</p>
+            </div>
+        </section>
+
+        <!-- About Content -->
+        <section class="about-content">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2>Our Story</h2>
+                        <p>CampusConnect was born from a simple observation: students were missing out on amazing campus
+                            events simply because they didn't know about them. As a team of undergraduate students, we
+                            decided to solve this problem.</p>
+                        <p>What started as a class project has grown into a platform used by thousands of students
+                            across our campus. We built this to make campus life more connected and engaging for
+                            everyone.</p>
+
+                        <h2>The Team</h2>
+                        <p>We're a group of Computer Science students passionate about creating solutions that matter.
+                            This project combines our skills in web development, design, and backend systems.</p>
+
+                        <div class="tech-stack">
+                            <h3>Technologies Used</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Responsive Design</span>
+                                <span class="tech-tag">Node.js (Backend)</span>
+                                <span class="tech-tag">MongoDB (Database)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">2,500+</div>
+                            <div class="stat-label">Active Users</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">Events Monthly</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">Satisfaction Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Goals -->
+        <section class="goals">
+            <div class="container">
+                <h2 class="section-title">Project Goals</h2>
+                <div class="goals-grid">
+                    <div class="goal-item">
+                        <h3>🎯 Accessibility</h3>
+                        <p>Make event information accessible to all students, regardless of their department or year</p>
+                    </div>
+                    <div class="goal-item">
+                        <h3>🤝 Community</h3>
+                        <p>Foster a stronger sense of community by connecting students with shared interests</p>
+                    </div>
+                    <div class="goal-item">
+                        <h3>📱 Convenience</h3>
+                        <p>Provide a mobile-friendly platform that works seamlessly on any device</p>
+                    </div>
+                    <div class="goal-item">
+                        <h3>🚀 Innovation</h3>
+                        <p>Continuously improve based on user feedback and emerging technologies</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer role="contentinfo">
-        <p>&copy; 2023 [Your Name]. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CampusConnect</h3>
+                    <p>Connecting students through events and activities</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@campusconnect.edu</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CampusConnect. Student Project.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
