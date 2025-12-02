@@ -1,0 +1,245 @@
+:root {
+    /* Color Palette - Dark Mode with Vibrant Accents */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-color: #38bdf8; /* Sky Blue */
+    --accent-hover: #0ea5e9;
+    --border-color: #334155;
+    
+    /* Fonts */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+
+    /* Spacing */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+
+    /* Border Radius */
+    --radius-md: 8px;
+    --radius-lg: 16px;
+}
+
+/* Reset & Base Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-secondary);
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    text-align: center;
+}
+
+nav a {
+    color: var(--text-secondary);
+    font-weight: 500;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+}
+
+nav a:hover, nav a[aria-current="page"] {
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: var(--spacing-lg) var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section, article, aside {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Buttons */
+a[role="button"] {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--bg-primary);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    text-align: center;
+    margin-top: var(--spacing-md);
+    align-self: flex-start;
+}
+
+a[role="button"]:hover {
+    background-color: var(--accent-hover);
+    color: white;
+}
+
+/* Cards (Projects/Articles) */
+article {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-color);
+}
+
+/* Aside */
+aside {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+aside h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+/* Tablet & Desktop Styles (Media Query) */
+@media (min-width: 768px) {
+    /* Header layout changes to row */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: var(--spacing-md) var(--spacing-xl);
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: var(--spacing-lg);
+    }
+
+    /* Main layout changes to row for main content + aside */
+    main {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: var(--spacing-xl);
+    }
+
+    /* Content area takes up more space */
+    main > section, 
+    main > article,
+    main > div.content-wrapper { /* Assuming we might wrap content later, but for now direct children */
+        flex: 3;
+    }
+
+    /* If there are multiple articles in a section (like projects), we might want them to grid, 
+       but requirement says Flexbox only. So we can wrap them. */
+    section[aria-label="Project List"] {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--spacing-md);
+    }
+    
+    section[aria-label="Project List"] article {
+        flex: 1 1 calc(50% - var(--spacing-md)); /* 2 columns */
+    }
+
+    /* Aside takes up less space */
+    aside {
+        flex: 1;
+        position: sticky;
+        top: var(--spacing-md);
+    }
+    
+    /* Typography adjustments */
+    h1 {
+        font-size: 2.5rem;
+    }
+}
