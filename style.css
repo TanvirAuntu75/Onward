@@ -4,10 +4,11 @@
     --bg-secondary: #1e293b;
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
-    --accent-color: #38bdf8; /* Sky Blue */
+    --accent-color: #38bdf8;
+    /* Sky Blue */
     --accent-hover: #0ea5e9;
     --border-color: #334155;
-    
+
     /* Fonts */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --font-heading: 'Outfit', sans-serif;
@@ -24,7 +25,9 @@
 }
 
 /* Reset & Base Styles */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -60,7 +63,9 @@ img {
 }
 
 /* Typography */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--font-heading);
     color: var(--text-primary);
     margin-bottom: var(--spacing-md);
@@ -110,7 +115,8 @@ nav a {
     border-radius: var(--radius-md);
 }
 
-nav a:hover, nav a[aria-current="page"] {
+nav a:hover,
+nav a[aria-current="page"] {
     color: var(--text-primary);
     background-color: var(--bg-primary);
 }
@@ -127,7 +133,9 @@ main {
     margin: 0 auto;
 }
 
-section, article, aside {
+section,
+article,
+aside {
     display: flex;
     flex-direction: column;
 }
@@ -193,6 +201,7 @@ footer p {
 
 /* Tablet & Desktop Styles (Media Query) */
 @media (min-width: 768px) {
+
     /* Header layout changes to row */
     header {
         flex-direction: row;
@@ -213,9 +222,10 @@ footer p {
     }
 
     /* Content area takes up more space */
-    main > section, 
-    main > article,
-    main > div.content-wrapper { /* Assuming we might wrap content later, but for now direct children */
+    main>section,
+    main>article,
+    main>div.content-wrapper {
+        /* Assuming we might wrap content later, but for now direct children */
         flex: 3;
     }
 
@@ -226,9 +236,10 @@ footer p {
         flex-wrap: wrap;
         gap: var(--spacing-md);
     }
-    
+
     section[aria-label="Project List"] article {
-        flex: 1 1 calc(50% - var(--spacing-md)); /* 2 columns */
+        flex: 1 1 calc(50% - var(--spacing-md));
+        /* 2 columns */
     }
 
     /* Aside takes up less space */
@@ -237,9 +248,32 @@ footer p {
         position: sticky;
         top: var(--spacing-md);
     }
-    
+
     /* Typography adjustments */
     h1 {
         font-size: 2.5rem;
     }
+}
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--accent-color);
+    color: var(--bg-primary);
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Focus Styles */
+a:focus,
+button:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
 }
